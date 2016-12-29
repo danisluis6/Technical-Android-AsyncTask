@@ -26,8 +26,36 @@
 
 	Đối với AsyncTask thì ta cần tạo một lớp kế thừa từ AsyncTask, sau đó từ MainActivity ta gọi hàm execute() của tiến trình này là OK.
 
-    * IMAGE ABOUT ASYNCTASK
+    * WE WILL PRACTISE WITH PROGRESSBAR
+
+    + Create a class MyAsyncTask.java and extends AsyncTask. And Override four method 
+
+	public class MyAsyncTask extends AsyncTask<String,Void,Bitmap> {
+	    @Override
+	    protected void onPreExecute() {
+		super.onPreExecute();
+	    }
+
+	    @Override
+	    protected void onPostExecute(Bitmap bitmap) {
+		super.onPostExecute(bitmap);
+	    }
+
+	    @Override
+	    protected Bitmap doInBackground(String... strings) {
+		return null;
+	    }
+
+	    @Override
+	    protected void onProgressUpdate(Void... values) {
+		super.onProgressUpdate(values);
+	    }
+	}
+
+    => You see it look like template to using AsyncTask
+
+    + NO result return OK
 
 <p align="center">
-  <img src="https://github.com/danisluis6/Technical-Android-AsyncTask/blob/version1/LevelA/1.png">
+  <img src="https://github.com/danisluis6/Technical-Android-AsyncTask/blob/version2/LevelB/1.png">
 </p>
